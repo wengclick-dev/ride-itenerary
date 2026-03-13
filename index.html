@@ -349,7 +349,42 @@ Open Full Route in Google Maps
 <div class="container">
 <div class="card mt-4 animate__animated animate__fadeInUp">
 <div class="card-body">
-<h3>Want to Join our Ride?</h3>
+<h3 class="cursive">Want to Join our Ride?</h3>
+<form id="rsvpForm"
+action="https://docs.google.com/forms/d/e/1FAIpQLSdBtcv8L9D103frr2Hk50Bnh90gP74idukhsxBoQZbpR3JCyQ/formResponse"
+method="POST"
+target="hidden_iframe">
+
+<input class="form-control mb-3"
+name="entry.1603073265"
+placeholder="Your Name"
+required>
+
+<input class="form-control mb-3"
+name="entry.2096088960"
+placeholder="Email"
+required>
+
+<label class="mb-2">Wanna join?</label>
+
+<div class="form-check">
+<input class="form-check-input" type="radio" name="entry.422528406" value="Yes" required>
+<label class="form-check-label">Yes</label>
+</div>
+
+<div class="form-check">
+<input class="form-check-input" type="radio" name="entry.422528406" value="No">
+<label class="form-check-label">No</label>
+</div>
+
+<button class="btn btn-success w-100 mt-3">
+Send
+</button>
+
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
 </div>
 </div>
 </div>
@@ -365,8 +400,20 @@ JARC Ride Itinerary | Developed by <b>ROPOS (Rowel Posacas)</b> © 2026
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<script>
+// RSVP
+$('#rsvpForm').submit(function(e){
+    e.preventDefault(); // prevent page reload
 
+    Swal.fire({
+        icon: 'success',
+        title: 'Thank you!',
+        text: 'Your RSVP has been received 💖'
+    });
+
+    // reset form
+    this.reset();
+});
+</script>
 </body>
 </html>
-
-
