@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Motorcycle Ride Itinerary</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+background:#f4f6f9;
+}
+
+header{
+background: linear-gradient(135deg, #0f5132, #198754);
+color:white;
+padding:18px 15px;
+}
+
+.section-title{
+border-left:6px solid #0d6efd;
+padding-left:10px;
+margin-bottom:20px;
+font-weight:bold;
+}
+
+.timeline li{
+margin-bottom:10px;
+}
+
+.photo img{
+width:100%;
+border-radius:10px;
+height:250px;
+object-fit:cover;
+}
+
+.card{
+border:none;
+border-radius:12px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+header img{
+height:80px;
+object-fit:contain;
+}
+.gallery-img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<div class="d-flex align-items-center justify-content-between flex-wrap">
+
+<div>
+<p class="mb-0">Meet-up: Jiabong Park | Call Time: <b>4:30 AM</b></p>
+<h1 class="fw-bold mb-0">🏍 JARC Ride Itinerary</h1>
+</div>
+
+<img src="jarc.png" alt="Riders Logo" style="height:120px;">
+
+</div>
+
+</div>
+</header>
+
+<div class="container-fluid my-5">
+
+<div class="row g-4">
+
+<!-- DAY 1 -->
+<div class="col-lg-5">
+<div class="card">
+<div class="card-body">
+
+<h3 class="section-title">Day 1</h3>
+
+<ul class="timeline">
+<li><b>4:30 AM</b> – Assembly / Call Time at Jiabong Park. Preparation and safety briefing.</li>
+<li><b>5:00 AM</b> – Departure from Jiabong Park.</li>
+<li><b>7:00 AM</b> – Breakfast stop at any Bulalo house or local karenderya.</li>
+<li><b>9:00 AM</b> – Arrival at Agas-Agas Bridge. Sightseeing, photos, and short rest.</li>
+<li><b>11:30 AM</b> – Arrival at Padre Burgos, Southern Leyte.</li>
+<li><b>12:00 PM</b> – Lunch at Tangkaan Beach. Swimming and relaxation.</li>
+<li><b>Overnight</b> – Stay overnight at Tangkaan Beach.</li>
+</ul>
+
+<div class="row mt-3">
+
+<div class="col-6 mb-3">
+<div class="photo">
+<h5>Agas-Agas Bridge</h5>
+<img src="agas.jpg">
+</div>
+</div>
+
+<div class="col-6">
+<div class="photo">
+<h5>Tangkaan Beach</h5>
+<img src="tangkaan.jpg">
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- DAY 2 -->
+<div class="col-lg-5">
+<div class="card">
+<div class="card-body">
+
+<h3 class="section-title">Day 2</h3>
+
+<ul class="timeline">
+<li><b>5:00 AM</b> – Wake up and prepare for the next ride.</li>
+<li><b>5:15 AM</b> – Breakfast at Tangkaan Beach / nearby eatery.</li>
+<li><b>5:45 AM</b> – Departure going to Mt. Caningag.</li>
+<li><b>7:00 AM</b> – Arrival at Mt. Caningag. Sightseeing, photo opportunity, and short rest.</li>
+<li><b>9:00 AM</b> – Start ride going back via Hinunangan–Silago Southern Leyte Coastal Route.</li>
+<li><b>12:00 PM</b> – Lunch stop at a local karenderya in Hinunangan or Silago.</li>
+<li><b>1:00 PM</b> – Continue ride straight home.</li>
+<li><b>4:00 PM</b> – Estimated arrival at Jiabong.</li>
+</ul>
+
+<div class="row mt-3">
+
+<div class="col-6 mb-3">
+<img src="picture1.jpg" class="gallery-img">
+</div>
+
+<div class="col-6 mb-3">
+<img src="picture2.jpg" class="gallery-img">
+</div>
+
+<div class="col-6">
+<img src="picture3.jpg" class="gallery-img">
+</div>
+
+<div class="col-6">
+<img src="picture4.jpg" class="gallery-img">
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- ROUTE MAP SIDEBAR -->
+<div class="col-lg-2">
+
+<div class="card">
+<div class="card-body">
+
+<h3 class="section-title text-center">Ride Route Map</h3>
+
+<p class="text-center">
+Jiabong → Agas-Agas Bridge → Tangkaan Beach → Mt. Caningag → Hinunangan → Silago → Jiabong
+</p>
+
+<div class="mb-3 text-center">
+<img 
+src="maproute.jpg"
+class="img-fluid rounded shadow"
+alt="Ride Route Map">
+</div>
+
+<div class="text-center">
+
+<a href="https://www.google.com/maps/dir/Jiabong+Municipal+Hall/Agas-Agas+Bridge+Southern+Leyte/Tangkaan+Beach+Padre+Burgos+Southern+Leyte/Mt+Caningag+Hindang+Leyte/Hinunangan+Southern+Leyte/Silago+Southern+Leyte/Jiabong+Municipal+Hall"
+target="_blank"
+class="btn btn-success w-100">
+
+Open Full Route in Google Maps
+
+</a>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<!-- REMINDERS -->
+<div class="card mt-4">
+<div class="card-body">
+
+<div class="row">
+
+<div class="col-md-8">
+
+<h3 class="section-title">Ride Reminders</h3>
+
+<ul>
+<li>Always wear helmet and complete riding gear.</li>
+<li>Check motorcycle condition before departure.</li>
+<li>Follow group ride safety protocols.</li>
+<li>Bring water, cash, and personal necessities.</li>
+<li>Respect local communities and keep the area clean.</li>
+</ul>
+
+</div>
+
+<div class="col-md-4 text-center">
+
+<h5 class="mb-3">Approved By</h5>
+
+<img src="4.png" alt="Signature" style="max-width:200px;" class="img-fluid">
+
+<h6 class="mb-0"><b>Delo Vibes</b></h6>
+<p class="text-muted">Club President</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
