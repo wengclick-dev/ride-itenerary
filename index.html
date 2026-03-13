@@ -397,6 +397,14 @@ JARC Ride Itinerary | Developed by <b>ROPOS (Rowel Posacas)</b> © 2026
 </p>
 </div>
 </footer>
+
+<div class="text-center mt-2 mb-3">
+<button class="btn btn-outline-light btn-sm" onclick="devInfo()">
+Developer Info
+</button>
+</div>
+
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
@@ -420,6 +428,29 @@ $('iframe[name="hidden_iframe"]').on('load', ()=>{
     $('#rsvpForm')[0].reset();
     submitted = false;
 });
+
+
+function devInfo(){
+    Swal.fire({
+        title:'Developer',
+        html:`
+        <b>ROPOS (Rowel Posacas)</b><br><br>
+
+        <b>Services / Skills</b><br>
+        • Online Wedding Invitation<br>
+        • PC Reformatting<br>
+        • Activating Office / Windows<br>
+        • System Capstone Project<br><br>
+
+        <b>Contact</b><br>
+        For inquires, just pm <b>Rowel Posacas</b> in Messenger<br>
+        📞 09483257011<br>
+        📧 rowelposacaswp@gmail.com
+        `,
+        icon:'info',
+        confirmButtonColor:'#198754'
+    });
+}
 </script>
 
 </body>
