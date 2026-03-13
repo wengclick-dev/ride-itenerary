@@ -402,27 +402,23 @@ JARC Ride Itinerary | Developed by <b>ROPOS (Rowel Posacas)</b> © 2026
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
 <script>
-var submitted = false;
+let submitted = false;
 
-$('#rsvpForm').on('submit', function(){
-    submitted = true;
-});
+$('#rsvpForm').submit(()=> submitted = true);
 
-document.querySelector('iframe[name="hidden_iframe"]').addEventListener('load', function () {
-    if (submitted) {
+$('iframe[name="hidden_iframe"]').on('load', ()=>{
+    if(!submitted) return;
 
-        Swal.fire({
-            icon: 'success',
-            title: 'Thank you!',
-            text: 'Your RSVP has been received 💖',
-            confirmButtonColor: '#198754'
-        });
+    Swal.fire({
+        icon:'success',
+        title:'Thank you!',
+        text:'Your request has been received 💖',
+        timer:2000,
+        showConfirmButton:false
+    });
 
-        // reset form
-        document.getElementById('rsvpForm').reset();
-
-        submitted = false;
-    }
+    $('#rsvpForm')[0].reset();
+    submitted = false;
 });
 </script>
 
