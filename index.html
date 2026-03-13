@@ -8,16 +8,22 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet"/>
+
 <style>
 
 body{
 background:#f4f6f9;
+font-family:Arial;
 }
 
 header{
 background: linear-gradient(135deg, #0f5132, #198754);
 color:white;
 padding:18px 15px;
+animation: fadeInDown 1s;
 }
 
 .section-title{
@@ -31,31 +37,50 @@ font-weight:bold;
 margin-bottom:10px;
 }
 
+.card{
+border:none;
+border-radius:12px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+transition:all .3s ease;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
 .photo img{
 width:100%;
 border-radius:10px;
 height:250px;
 object-fit:cover;
+transition:transform .3s ease;
+cursor:pointer;
 }
 
-.card{
-border:none;
-border-radius:12px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
+.photo img:hover{
+transform:scale(1.05);
+}
+
+.gallery-img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:10px;
+transition:transform .3s ease;
+cursor:pointer;
+}
+
+.gallery-img:hover{
+transform:scale(1.05);
 }
 
 header img{
 height:80px;
 object-fit:contain;
 }
-.gallery-img{
-width:100%;
-height:160px;
-object-fit:cover;
-border-radius:10px;
-}
-</style>
 
+</style>
 </head>
 
 <body>
@@ -70,47 +95,58 @@ border-radius:10px;
 <h1 class="fw-bold mb-0">🏍 JARC Ride Itinerary</h1>
 </div>
 
-<img src="jarc.png" alt="Riders Logo" style="height:120px;">
+<img src="jarc.png" alt="Riders Logo">
 
 </div>
-
 </div>
 </header>
 
-<div class="container-fluid my-5">
 
+<div class="container-fluid my-5">
 <div class="row g-4">
 
+
 <!-- DAY 1 -->
-<div class="col-lg-5">
+<div class="col-lg-5 animate__animated animate__fadeInLeft">
+
 <div class="card">
 <div class="card-body">
 
 <h3 class="section-title">Day 1</h3>
 
 <ul class="timeline">
-<li><b>4:30 AM</b> – Assembly / Call Time at Jiabong Park. Preparation and safety briefing.</li>
+<li><b>4:30 AM</b> – Assembly / Call Time at Jiabong Park.</li>
 <li><b>5:00 AM</b> – Departure from Jiabong Park.</li>
-<li><b>7:00 AM</b> – Breakfast stop at any Bulalo house or local karenderya.</li>
-<li><b>9:00 AM</b> – Arrival at Agas-Agas Bridge. Sightseeing, photos, and short rest.</li>
-<li><b>11:30 AM</b> – Arrival at Padre Burgos, Southern Leyte.</li>
-<li><b>12:00 PM</b> – Lunch at Tangkaan Beach. Swimming and relaxation.</li>
-<li><b>Overnight</b> – Stay overnight at Tangkaan Beach.</li>
+<li><b>7:00 AM</b> – Breakfast stop at local karenderya.</li>
+<li><b>9:00 AM</b> – Arrival at Agas-Agas Bridge.</li>
+<li><b>11:30 AM</b> – Arrival at Padre Burgos.</li>
+<li><b>12:00 PM</b> – Lunch and swimming at Tangkaan Beach.</li>
+<li><b>Overnight</b> – Stay at Tangkaan Beach.</li>
 </ul>
 
 <div class="row mt-3">
 
 <div class="col-6 mb-3">
 <div class="photo">
+
 <h5>Agas-Agas Bridge</h5>
+
+<a href="agas.jpg" data-lightbox="ride">
 <img src="agas.jpg">
+</a>
+
 </div>
 </div>
 
 <div class="col-6">
 <div class="photo">
+
 <h5>Tangkaan Beach</h5>
+
+<a href="tangkaan.jpg" data-lightbox="ride">
 <img src="tangkaan.jpg">
+</a>
+
 </div>
 </div>
 
@@ -122,39 +158,48 @@ border-radius:10px;
 
 
 <!-- DAY 2 -->
-<div class="col-lg-5">
+<div class="col-lg-5 animate__animated animate__fadeInUp">
+
 <div class="card">
 <div class="card-body">
 
 <h3 class="section-title">Day 2</h3>
 
 <ul class="timeline">
-<li><b>5:00 AM</b> – Wake up and prepare for the next ride.</li>
-<li><b>5:15 AM</b> – Breakfast at Tangkaan Beach / nearby eatery.</li>
-<li><b>5:45 AM</b> – Departure going to Mt. Caningag.</li>
-<li><b>7:00 AM</b> – Arrival at Mt. Caningag. Sightseeing, photo opportunity, and short rest.</li>
-<li><b>9:00 AM</b> – Start ride going back via Hinunangan–Silago Southern Leyte Coastal Route.</li>
-<li><b>12:00 PM</b> – Lunch stop at a local karenderya in Hinunangan or Silago.</li>
-<li><b>1:00 PM</b> – Continue ride straight home.</li>
-<li><b>4:00 PM</b> – Estimated arrival at Jiabong.</li>
+<li><b>5:00 AM</b> – Wake up and prepare.</li>
+<li><b>5:15 AM</b> – Breakfast.</li>
+<li><b>5:45 AM</b> – Ride to Mt. Caningag.</li>
+<li><b>7:00 AM</b> – Arrival and photo session.</li>
+<li><b>9:00 AM</b> – Ride via Hinunangan–Silago Coastal Route.</li>
+<li><b>12:00 PM</b> – Lunch stop.</li>
+<li><b>1:00 PM</b> – Continue ride home.</li>
+<li><b>4:00 PM</b> – Arrival at Jiabong.</li>
 </ul>
 
 <div class="row mt-3">
 
 <div class="col-6 mb-3">
-<img src="Picture1.jpg" class="gallery-img">
+<a href="picture1.jpg" data-lightbox="ride">
+<img src="picture1.jpg" class="gallery-img">
+</a>
 </div>
 
 <div class="col-6 mb-3">
-<img src="Picture2.jpg" class="gallery-img">
+<a href="picture2.jpg" data-lightbox="ride">
+<img src="picture2.jpg" class="gallery-img">
+</a>
 </div>
 
 <div class="col-6">
-<img src="Picture3.jpg" class="gallery-img">
+<a href="picture3.jpg" data-lightbox="ride">
+<img src="picture3.jpg" class="gallery-img">
+</a>
 </div>
 
 <div class="col-6">
-<img src="Picture4.jpg" class="gallery-img">
+<a href="picture4.jpg" data-lightbox="ride">
+<img src="picture4.jpg" class="gallery-img">
+</a>
 </div>
 
 </div>
@@ -164,8 +209,8 @@ border-radius:10px;
 </div>
 
 
-<!-- ROUTE MAP SIDEBAR -->
-<div class="col-lg-2">
+<!-- ROUTE MAP -->
+<div class="col-lg-2 animate__animated animate__fadeInRight">
 
 <div class="card">
 <div class="card-body">
@@ -177,17 +222,18 @@ Jiabong → Agas-Agas Bridge → Tangkaan Beach → Mt. Caningag → Hinunangan 
 </p>
 
 <div class="mb-3 text-center">
-<img 
-src="maproute.jpg"
-class="img-fluid rounded shadow"
-alt="Ride Route Map">
+
+<a href="maproute.jpg" data-lightbox="ride">
+<img src="maproute.jpg" class="img-fluid rounded shadow">
+</a>
+
 </div>
 
 <div class="text-center">
 
 <a href="https://www.google.com/maps/dir/Jiabong+Municipal+Hall/Agas-Agas+Bridge+Southern+Leyte/Tangkaan+Beach+Padre+Burgos+Southern+Leyte/Mt+Caningag+Hindang+Leyte/Hinunangan+Southern+Leyte/Silago+Southern+Leyte/Jiabong+Municipal+Hall"
 target="_blank"
-class="btn btn-success w-100">
+class="btn btn-success w-100 animate__animated animate__pulse animate__infinite">
 
 Open Full Route in Google Maps
 
@@ -197,14 +243,17 @@ Open Full Route in Google Maps
 
 </div>
 </div>
-
 </div>
 
 </div>
 </div>
+
 
 <!-- REMINDERS -->
-<div class="card mt-4">
+<div class="container">
+
+<div class="card mt-4 animate__animated animate__fadeInUp">
+
 <div class="card-body">
 
 <div class="row">
@@ -214,11 +263,11 @@ Open Full Route in Google Maps
 <h3 class="section-title">Ride Reminders</h3>
 
 <ul>
-<li>Always wear helmet and complete riding gear.</li>
-<li>Check motorcycle condition before departure.</li>
-<li>Follow group ride safety protocols.</li>
-<li>Bring water, cash, and personal necessities.</li>
-<li>Respect local communities and keep the area clean.</li>
+<li>Always wear helmet and riding gear.</li>
+<li>Check motorcycle condition.</li>
+<li>Follow group ride safety.</li>
+<li>Bring water, cash, essentials.</li>
+<li>Respect communities.</li>
 </ul>
 
 </div>
@@ -227,7 +276,7 @@ Open Full Route in Google Maps
 
 <h5 class="mb-3">Approved By</h5>
 
-<img src="4.png" alt="Signature" style="max-width:200px;" class="img-fluid">
+<img src="4.png" style="max-width:200px;" class="img-fluid">
 
 <h6 class="mb-0"><b>Delo Vibes</b></h6>
 <p class="text-muted">Club President</p>
@@ -241,6 +290,8 @@ Open Full Route in Google Maps
 
 </div>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
 </body>
 </html>
-
